@@ -1,0 +1,14 @@
+v0.0.11
+20180713
+Add '-n' option, users can specify how many top-hits to be output.
+
+v0.0.8
+20180711
+Using logging module, and specify whether one sequence gets no result because
+of TimeOutException.
+
+v0.0.7
+20180710
+do not capture too exactly, to the 'td' level is fine, 
+but do not capture 'h' or 'em' level. Because BOLD result page won't
+have 'h' or 'em' item when the result is empty.
