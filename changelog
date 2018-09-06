@@ -1,3 +1,7 @@
+v0.0.12
+20180906
+Add '-r' option, to specify the maximum time a sequence will be submited, to handle TimeOutException.
+
 v0.0.11
 20180713
 Add '-n' option, users can specify how many top-hits to be output.
