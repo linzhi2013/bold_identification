@@ -24,38 +24,52 @@ There will be a command `bold_identification` created under the same directory a
 ## 3 Usage
 run `bold_identification`
 
+    usage: bold_identification [-h] -i <str> [-f <str>] -o <str>
+                               [-d {COX1,COX1_SPECIES,COX1_SPECIES_PUBLIC,COX1_L640bp,ITS,Plant}]
+                               [-n <int>] [-b {PhantomJS,Firefox,Chrome}]
+                               [-t <int>] [-r <int>] [-c] [-D] [-H]
 
-    usage: bold_identification [-h] -i <str> -o <str>
-                                             [-d {COX1,COX1_SPECIES,COX1_SPECIES_PUBLIC,COX1_L640bp,ITS,Plant}]
-                                             [-n <int>] [-b {Firefox,Chrome}]
-                                             [-t <int>] [-r <int>]
+    To identify taxa of given sequences from BOLD (http://www.boldsystems.org/).
+    Some sequences can fail to get taxon information, which can be caused by
+    TimeoutException if your network to the BOLD server is bad.
+    Those sequences will be output in the file '*.TimeoutException.fasta'.
 
-    To identify taxa of given sequences. Some sequences can fail to get taxon
-    information, which can be caused by TimeoutException if your network to the
-    BOLD server is bad. Those sequences will be output in the file
-    '*.TimeoutException.fasta'. You can: 1) run another searching for those
-    sequences directly; 2) change the browser (-b option); 3) lengthen the time to
-    wait for each query (-t option); 4) increase submission times (-r option) for
-    a sequence. By mengguanliang@genomics.cn. See
-    https://github.com/linzhi2013/bold_identification.
+    You can:
+    1) run another searching with the same command directly (-c option);
+    2) change the browser (-b option);
+    3) lengthen the time to wait for each query (-t option);
+    4) increase submission times (-r option) for a sequence.
+
+    Also, the sequences without BOLD matches will be output in the
+    file '*.NoBoldMatchError.fasta'
+
+    By mengguanliang@genomics.cn.
+    See https://github.com/linzhi2013/bold_identification.
+
 
     optional arguments:
       -h, --help            show this help message and exit
-      -i <str>              input fasta file
+      -i <str>              input file name
+      -f <str>              input file format [fasta]
       -o <str>              outfile
       -d {COX1,COX1_SPECIES,COX1_SPECIES_PUBLIC,COX1_L640bp,ITS,Plant}
                             database to search [COX1]
       -n <int>              how many first top hits will be output. [1]
-      -b {Firefox,Chrome}   browser to be used [Chrome]
-      -t <int>              the time to wait for a query [30]
+      -b {PhantomJS,Firefox,Chrome}
+                            browser to be used [PhantomJS]
+      -t <int>              the time to wait for a query [60]
       -r <int>              Maximum submission time for a sequence, useful for
-                            handling TimeOutException. [2]
-
+                            handling TimeOutException. [4]
+      -c                    continuous mode, jump over the ones already in "-o"
+                            file, will resubmit all the remained. [False]
+      -D                    debug mode output [False]
+      -H                    No graphical window mode, possibly not work for "-b
+                            Firefox", has no effect on "-b PhantomJS". [False]
 
 ## 4 Problems
 
 ### Cannot download the browsers
-This can happen when your network is not good.   
+This can happen when your network is not good.
 
 Solution:   
 Download the executable driver file manaully, then extract the executable and put it on the `drivers` directory. See more details output by `bold_identification` when you run into this problem.
@@ -64,11 +78,14 @@ Download the executable driver file manaully, then extract the executable and pu
 Sometimes it happens to me. And I don't know why. I guess it is because the browser driver is not so stable.
 
 Solution:   
-Try another browser with the `-b` option.
+Try another browser with the `-b` option.   
+if this happens with '-H' option, try not to use it.
 
 
 ## 5 Citation
-Currently I have no plan to publish `bold_identification`.
+When you use `bold_identification` in your study, please cite:
+
+    Guanliang MENG, Chengran ZHOU, et al., Shanlin LIU, Shaoying LIU. Mitogenome and nuclear gene datasets of small mammals on Qinghai-Tibetan Plateau.
 
 
 
