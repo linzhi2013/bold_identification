@@ -2,7 +2,7 @@
 
 **Important**
 
-If you do not how to install Python packages, please refer to `https://packaging.python.org/tutorials/installing-packages/`. If you want to learn more about Python, please go to `https://docs.python.org/3/`. I cannot offer any support for such kind of problems.
+This package relies on Python3.5 or hihger version. If you do not have Python3 installed, please intall it first. If you do not know how to install Python packages, please refer to `https://packaging.python.org/tutorials/installing-packages/`. Please go to `https://docs.python.org/3/` to learn more about Python. I cannot offer any support for such kind of problems.
 
 ## 1 Introduction
 
