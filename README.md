@@ -52,7 +52,7 @@ run `bold_identification`
     Also, the sequences without BOLD matches will be output in the
     file '*.NoBoldMatchError.fasta'
 
-    By mengguanliang@genomics.cn.
+    By mengguanliang (AT) genomics [DOT] cn.
     See https://github.com/linzhi2013/bold_identification.
 
     Notes:
