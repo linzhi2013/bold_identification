@@ -105,7 +105,7 @@ if this happens with '-H' option, try not to use it.
 ## 5 Citation
 When you use `bold_identification` in your study, please cite:
 
-    Chentao Yang1,2, Shangjin Tan1,2, Guangliang Meng1,2, Junqiang Xu1,2, Sha Liao1,2, Ao Chen1,2, Xiaowei Chen1,2, Shanlin Liu1,2 *. Access COI barcode efficiently using high throughput Single-End 400 bp sequencing.
+    Chentao Yang, Shangjin Tan, Guangliang Meng, Junqiang Xu, Sha Liao, Ao Chen, Xiaowei Chen, Shanlin Liu. Access COI barcode efficiently using high throughput Single-End 400 bp sequencing. https://doi.org/10.1101/498618
 
 
 
