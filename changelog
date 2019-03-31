@@ -1,3 +1,57 @@
+v0.0.22
+20190331
+use requests + bs4 packages to replace seleum
+
+v0.0.20
+20181121
+change biopython verion requirement to be >1.5
+
+
+v0.0.20
+20181028
+remove the empty lines from the output "-o".
+fixed a logging error.
+Add more NoBoldMatchError.
+
+v0.0.19
+20181027
+fixed a bug, '-n 10' couldn't output the top 10 hits, only the first could be output.
+
+
+v0.0.18
+20181026
+Add PhantomJS browser support, which does not need an graphical window natively.
+
+v0.0.17
+20181026
+Add '-H' mode, i.e., no graphical window. But only Chrome succeeded in Mac and Ubuntu, while Firefox failed. Windows system has not been tested on.
+
+
+v0.0.16
+20181024
+Add '-c' mode.
+Add '-debug' option.
+Add '-f' option, to specify input file format.
+Add can deal with NoBoldMatchError now.
+
+v0.0.15
+20181024
+resubmission of v0.0.14.
+
+v0.0.14
+20181023
+
+Now the Animal pannel has been tested working with Chrome. the funig and plant pannel won't
+work on this version
+
+
+v0.0.13
+20181023
+1. reformat the script, make it meet PEP8 standard.
+2. The 'TimeOutException' sequences will only go to '*.TimeoutException.fasta' file, and
+ their sequences ids will not be presented on the result file (-o option) any more.
+3. fixed a bug when use '-d COX1_SPECIES', e.g., always got TimeoutException.
+
 v0.0.12
 20180906
 Add '-r' option, to specify the maximum time a sequence will be submited, to handle TimeOutException.
@@ -13,6 +67,6 @@ of TimeOutException.
 
 v0.0.7
 20180710
-do not capture too exactly, to the 'td' level is fine, 
+do not capture too exactly, to the 'td' level is fine,
 but do not capture 'h' or 'em' level. Because BOLD result page won't
 have 'h' or 'em' item when the result is empty.

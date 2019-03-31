@@ -52,7 +52,7 @@ run `bold_identification`
     Also, the sequences without BOLD matches will be output in the
     file '*.NoBoldMatchError.fasta'
 
-    By mengguanliang (AT) genomics [DOT] cn.
+    By mengguanliang@genomics.cn.
     See https://github.com/linzhi2013/bold_identification.
 
     Notes:
@@ -105,7 +105,7 @@ if this happens with '-H' option, try not to use it.
 ## 5 Citation
 When you use `bold_identification` in your study, please cite:
 
-    Chentao Yang, Shangjin Tan, Guangliang Meng, Junqiang Xu, Sha Liao, Ao Chen, Xiaowei Chen, Shanlin Liu. Access COI barcode efficiently using high throughput Single-End 400 bp sequencing. https://doi.org/10.1101/498618
+    Guanliang MENG, Chengran ZHOU, et. al., Shanlin LIU, Shaoying LIU. Mitogenome and nuclear gene datasets of small mammals on Qinghai-Tibetan Plateau.
 
 
 
