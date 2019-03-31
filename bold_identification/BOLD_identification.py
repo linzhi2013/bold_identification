@@ -14,7 +14,7 @@ from logger import get_logger
 # see http://docs.python-requests.org/en/master/user/quickstart/
 
 def get_parameters():
-    version = '0.0.22'
+    version = '0.0.23'
     description = '''
 To identify taxa of given sequences from BOLD (http://www.boldsystems.org/).
 Some sequences can fail to get taxon information, which can be caused by

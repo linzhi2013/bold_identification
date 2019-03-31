@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bold_identification",
-    version="0.0.22",
+    version="0.0.23",
     author='Guanliang Meng',
     author_email='linzhi2012@gmail.com',
     description="To get taxa information of sequences from BOLD system",
@@ -19,7 +19,7 @@ setuptools.setup(
 
     entry_points={
         'console_scripts': [
-            'bold_identification=bold_identification.BOLDv4_identification_selenium:main',
+            'bold_identification=bold_identification.BOLD_identification:main',
         ],
     },
     classifiers=(
