@@ -7,14 +7,15 @@ import time
 import os
 import argparse
 from Bio import SeqIO
-from .bold_engin import BOLD, NoBoldMatchError
-from .logger import get_logger
 
+src_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, src_path)
+from bold_engin import BOLD, NoBoldMatchError
+from logger import get_logger
 
-# see http://docs.python-requests.org/en/master/user/quickstart/
 
 def get_parameters():
-    version = '0.0.24'
+    version = '0.0.25'
     description = '''
 To identify taxa of given sequences from BOLD (http://www.boldsystems.org/).
 Some sequences can fail to get taxon information, which can be caused by
@@ -60,7 +61,7 @@ version: {version}
         help='Maximum submission time for a sequence, useful for handling TimeOutException. [%(default)s]')
 
     parser.add_argument('-c', dest='to_continue', action='count',
-        default=False, help='continuous mode, jump over the ones already in "-o" file, will resubmit all the remained. use "-cc" to also jump over the ones in "*.NoBoldMatchError.fasta" file. [%(default)s]')
+        default=0, help='continuous mode, jump over the ones already in "-o" file, will resubmit all the remained. use "-cc" to also jump over the ones in "*.NoBoldMatchError.fasta" file. [%(default)s]')
 
     parser.add_argument('-D', dest='debug', action='store_true', default=False,
         help='debug mode output [%(default)s]')
@@ -152,7 +153,7 @@ def main():
 
             except NoBoldMatchError as e:
                 logger.debug(e)
-                SeqIO.write(rec, fhout_noBoldMatch, args.infileformat)
+                SeqIO.write(rec, fhout_noBoldMatch, 'fasta')
                 # no need to re-submit
                 break
             else:
@@ -169,14 +170,13 @@ def main():
 
                         line = [item[k] for k in item.keys()]
                         line = '\t'.join(line)
-                        print(rec.description, line,
-                            sep='\t', file=fhout,flush=True)
+                        print(line, file=fhout,flush=True)
                     break
                 else:
                     # can be Timeout, will re-submit
-                    pass
+                    continue
         else:
-            SeqIO.write(rec, fhout_timeoutSeq, args.infileformat)
+            SeqIO.write(rec, fhout_timeoutSeq, 'fasta')
 
         # to avoid your IP address being blocked by BOLD server.
         time.sleep(2)

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bold_identification",
-    version="0.0.24",
+    version="0.0.25",
     author='Guanliang Meng',
     author_email='linzhi2012@gmail.com',
     description="To get taxa information of sequences from BOLD system",
@@ -15,7 +15,7 @@ setuptools.setup(
     url='https://github.com/linzhi2013/bold_identification',
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=['biopython>1.5', 'bs4','requests'],
+    install_requires=['biopython>1.5', 'bs4','requests', 'html5lib'],
 
     entry_points={
         'console_scripts': [

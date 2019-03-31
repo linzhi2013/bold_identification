@@ -1,3 +1,9 @@
+
+v0.0.25
+20190331
+use 'html5lib' to deal page source, to get best results
+
+
 v0.0.22
 20190331
 use requests + bs4 packages to replace seleum

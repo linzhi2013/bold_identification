@@ -79,7 +79,7 @@ class taxonRanks(object):
         if 'Unable to match any records in the selected database.' in page_source:
             raise NoBoldMatchError(seqid)
 
-        soup = BeautifulSoup(page_source, "lxml")
+        soup = BeautifulSoup(page_source, "html5lib")
 
         result_class = self.get_table_class(pane_type=pane_type)
         table = soup.find_all('table', class_=result_class)[0]
@@ -95,9 +95,11 @@ class taxonRanks(object):
                 continue
             else:
                 taxon_oneline = collections.OrderedDict()
+                taxon_oneline['seqid'] = seqid
                 for col_name, col_val in zip(ranks, row.find_all('td')):
                     taxon_oneline[col_name] = col_val.text.strip()
                 taxa.append(taxon_oneline)
+
 
         return taxa
 
