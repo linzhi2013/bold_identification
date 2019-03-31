@@ -7,8 +7,8 @@ import time
 import os
 import argparse
 from Bio import SeqIO
-from bold_engin import BOLD, NoBoldMatchError
-from logger import get_logger
+from .bold_engin import BOLD, NoBoldMatchError
+from .logger import get_logger
 
 
 # see http://docs.python-requests.org/en/master/user/quickstart/
