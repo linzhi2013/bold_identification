@@ -1,9 +1,5 @@
 # bold_identification
 
-**Important**
-
-This package relies on Python3. If you do not have Python3 installed, please intall it first. If you do not know how to install Python packages, please refer to `https://packaging.python.org/tutorials/installing-packages/`. Please go to `https://docs.python.org/3/` to learn more about Python. I cannot offer any support for such kind of problems.
-
 ## 1 Introduction
 
 see `https://github.com/linzhi2013/bold_identification`.
@@ -17,16 +13,16 @@ Currently, `bold_identification` only runs on Mac OS, Windows 64bit, Linux.
 
 [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/bold-identification/README.html)
 
-Or with pip
+Or with `pip`
 
-    pip install bold_identification
+    $ pip install bold_identification
 
 There will be a command `bold_identification` created under the same directory as your `pip` command.
 
 ## 3 Usage
 run `bold_identification`
 
-
+    $ bold_identification
     usage: bold_identification [-h] -i <str> [-f <str>] -o <str>
                               [-d {COX1,COX1_SPECIES,COX1_SPECIES_PUBLIC,COX1_L640bp,ITS,MATK_RBCL}]
                               [-n <int>] [-r <int>] [-c] [-D] [--version]
