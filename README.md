@@ -13,7 +13,11 @@ This is a Python3 package which can get the taxonomy information of sequences fr
 Currently, `bold_identification` only runs on Mac OS, Windows 64bit, Linux.
 
 
-## 2 Installation
+## 2 Installation 
+
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/bold-identification/README.html)
+
+Or with pip
 
     pip install bold_identification
 
