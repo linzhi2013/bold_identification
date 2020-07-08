@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import sys
 import collections
 
+# Copyright Guanliang MENG 2018-2020
+# License: GPL v3
 
 class NoBoldMatchError(Exception):
     def __init__(self, arg):

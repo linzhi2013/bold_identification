@@ -1,0 +1,3 @@
+[console_scripts]
+bold_identification = bold_identification.BOLD_identification:main
+

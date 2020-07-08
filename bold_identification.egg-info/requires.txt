@@ -1,0 +1,4 @@
+biopython>1.5
+bs4
+requests
+html5lib

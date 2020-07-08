@@ -1,4 +1,9 @@
 
+v0.0.26
+20190708
+Add chimera check support.
+
+
 v0.0.25
 20190331
 use 'html5lib' to deal page source, to get best results
