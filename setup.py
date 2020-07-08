@@ -7,7 +7,7 @@ setuptools.setup(
     name="bold_identification",
     version="0.0.26",
     author='Guanliang Meng',
-    author_email='linzhi2012[TA]gmail[TOD]com',
+    author_email='linzhi2012@gmail.com',
     description="To get taxa information of sequences from BOLD system",
     long_description=long_description,
     long_description_content_type="text/markdown",
