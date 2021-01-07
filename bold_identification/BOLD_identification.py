@@ -16,7 +16,7 @@ from logger import get_logger
 
 
 def get_parameters():
-    version = '0.0.26'
+    version = '0.0.27'
     description = '''
 To identify taxa of given sequences from BOLD (http://www.boldsystems.org/).
 Some sequences can fail to get taxon information, which can be caused by
@@ -31,8 +31,13 @@ You can:
 Also, the sequences without BOLD matches will be output in the
 file '*.NoBoldMatchError.fasta'
 
-By mengguanliang AT genomics DOT cn.
+By Guanliang Meng.
 See https://github.com/linzhi2013/bold_identification.
+
+Citation:
+Yang C, Zheng Y, Tan S, Meng G, et al.
+Efficient COI barcoding using high throughput single-end 400 bp sequencing.
+https://doi.org/10.1186/s12864-020-07255-w
 
 version: {version}
 '''.format(version=version)

@@ -44,7 +44,8 @@ class BOLD(object):
         return taxonRanks(
             page_source=page_source,
             seqid=self.seqid,
-            pane_type=self.pane_type)
+            pane_type=self.pane_type,
+            db=self.db)
 
 
     def db_to_paneType(self, db=None):
@@ -70,20 +71,21 @@ class BOLD(object):
 
 class taxonRanks(object):
     """docstring for taxonRanks"""
-    def __init__(self, page_source=None, seqid=None, pane_type=None):
+    def __init__(self, page_source=None, seqid=None, pane_type=None, db=None):
         super(taxonRanks, self).__init__()
         self.page_source = page_source
         self.seqid = seqid
         self.pane_type = pane_type
-        self.taxa = self.get_taxonRank(page_source=self.page_source, seqid=self.seqid, pane_type=self.pane_type)
+        self.db = db
+        self.taxa = self.get_taxonRank(page_source=self.page_source, seqid=self.seqid, pane_type=self.pane_type, db=self.db)
 
-    def get_taxonRank(self, page_source=None, seqid=None, pane_type=None):
+    def get_taxonRank(self, page_source=None, seqid=None, pane_type=None, db=None):
         if 'Unable to match any records in the selected database.' in page_source:
             raise NoBoldMatchError(seqid)
 
         soup = BeautifulSoup(page_source, "html5lib")
 
-        result_class = self.get_table_class(pane_type=pane_type)
+        result_class = self.get_table_class(pane_type=pane_type, db=db)
         table = soup.find_all('table', class_=result_class)[0]
 
         head_line = True
@@ -105,17 +107,23 @@ class taxonRanks(object):
 
         return taxa
 
-    def get_table_class(self, pane_type=None):
+    def get_table_class(self, pane_type=None, db='COX1'):
         paneType_class = {
-            'animalTabPane': 'resultsTable noborder',
-            'fungiTabPane': 'table resultTable noborder',
-            'plantTabPane': 'table resultTable noborder',
+            'animalTabPane': {
+                'COX1': 'resultsTable noborder',
+                'COX1_SPECIES': 'table resultsTable noborder',
+                'COX1_SPECIES_PUBLIC': 'table resultsTable noborder',
+                'COX1_L640bp': 'table resultsTable noborder',},
+            'fungiTabPane': {
+                'ITS': 'table resultTable noborder'},
+            'plantTabPane': {
+                'MATK_RBCL':'table resultTable noborder'},
         }
 
-        return paneType_class[pane_type]
+        return paneType_class[pane_type][db]
 
 
-
+# 'COX1', 'COX1_SPECIES', 'COX1_SPECIES_PUBLIC', 'COX1_L640bp','ITS', 'MATK_RBCL'
 
 
 

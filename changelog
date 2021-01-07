@@ -1,4 +1,9 @@
 
+v0.0.27
+20210107
+Fixed a bug when search COX1_SPECIES etc. database for the result class of HMTL.
+
+
 v0.0.26
 20190708
 Add chimera check support.
