@@ -8,6 +8,7 @@ This is a Python3 package which can get the taxonomy information of sequences fr
 
 Currently, `bold_identification` only runs on Mac OS, Windows 64bit, Linux.
 
+This script is part of the HIFI-barcode-SE400 pipeline (https://github.com/comery/HIFI-barcode-SE400).
 
 ## 2 Installation 
 
@@ -76,6 +77,17 @@ When you use `bold_identification` in your study, please cite:
     Efficient COI barcoding using high throughput single-end 400 bp sequencing.
     https://doi.org/10.1186/s12864-020-07255-w
 
+
+## Publications which used this script 
+
+
+1. Arcila, Dahiana, et al. "Testing the utility of alternative metrics of branch support to address the ancient evolutionary radiation of tunas, stromateoids, and allies (Teleostei: Pelagiaria)." Systematic Biology 70.6 (2021): 1123-1144.
+
+2. Huber, Bernhard A., et al. "Metagonia spiders of Galápagos: blind cave-dwellers and their epigean relatives (Araneae, Pholcidae)." Invertebrate Systematics 36.7 (2022): 647-678.
+
+3. Klimova, Anastasia, et al. "Metabarcoding reveals seasonal and spatial patterns of arthropod community assemblages in two contrasting habitats: Desert and oasis of the Baja California Peninsula, Mexico." Diversity and Distributions (2023).
+
+4. Huber, Bernhard A., and Guanliang Meng. "On the mysterious Seychellois endemic spider genus Cenemus (Araneae, Pholcidae)." Arthropod Systematics & Phylogeny 81 (2023): 179-200.
 
 
 
