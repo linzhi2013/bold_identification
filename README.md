@@ -78,7 +78,7 @@ When you use `bold_identification` in your study, please cite:
     https://doi.org/10.1186/s12864-020-07255-w
 
 
-## Publications which used this script 
+## 5 Publications which used this script 
 
 
 1. Arcila, Dahiana, et al. "Testing the utility of alternative metrics of branch support to address the ancient evolutionary radiation of tunas, stromateoids, and allies (Teleostei: Pelagiaria)." Systematic Biology 70.6 (2021): 1123-1144.
